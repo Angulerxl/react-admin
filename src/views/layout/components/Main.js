@@ -10,6 +10,7 @@ export default class Main extends Component {
         return (
             <div className="main">
                 欢迎xx
+               
             </div>
         )
     }
