@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import './style/topNav.scss'
 
-export default class TopNav extends Component {
+class TopNav extends Component {
     // constructor(props) {
     //     super(props)
     // }
@@ -13,10 +14,14 @@ export default class TopNav extends Component {
                     退出
                 </span>
                 <span className="acount ">
-                    用户名：{'超级管理员'}
+                    用户名：{this.props.state.account}
                 </span>
                 
             </div>
         )
     }
 } 
+function mapStateToProps(state) {
+    return { state: state.login }
+}
+export default connect(mapStateToProps)(TopNav);
