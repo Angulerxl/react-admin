@@ -11,3 +11,9 @@ export function updatePsW(value) {
         value
     }
 }
+export function isLogin(value) {
+    return {
+        type: 'IS_LOGIN',
+        value
+    }
+}

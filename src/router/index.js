@@ -1,16 +1,17 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Redirect } from 'react-router-dom'
 import Layout from '@/views/layout'
 import Login from '@/views/login'
-
+// const history = useHistory()
+// console.log(history,'====lishi')
+// debugger
 export default class Routers extends React.Component { 
+  
     render() { 
         return (
-          <Router>
-            <Route path="/" component={Layout}>
-              {/* <IndexRoute component={Layout} /> */}
-              {/* <Route path="accounts" component={Accounts} /> */}
-            </Route>
+          <Router >
+            <Route path="/" exact render={() => <Redirect to="/layout" />} />
+            <Route path="/layout" component={Layout} />
             <Route path="/login" component={Login} />
           </Router>
         )

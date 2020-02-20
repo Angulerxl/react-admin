@@ -7,6 +7,7 @@ import * as loginActions from '@/redux/actions/login'
  class Login extends Component {
                  constructor(props) {
                    super(props)
+                   console.log(props,'====props')
                    this.handleAccount = this.handleAccount.bind(this)
                    this.handlePW = this.handlePW.bind(this)
                    this.handleSubmit = this.handleSubmit.bind(this)
@@ -18,7 +19,9 @@ import * as loginActions from '@/redux/actions/login'
                   this.props.actions.updatePsW(e.target.value)
                  }
                 handleSubmit() { 
-                    alert('提交表单')
+                  this.props.actions.isLogin(true)
+                  alert('提交表单')
+                  this.props.history.push("/layout");
                 }
                  render() {
                    return (
@@ -28,7 +31,7 @@ import * as loginActions from '@/redux/actions/login'
                          </div>
                          <div className="content">
                            <div>
-                             <label htmlFor="">账号：</label>
+                           <label htmlFor="">账号：</label>
                              <input
                                type="text"
                                value={this.props.state.account}
@@ -73,7 +76,7 @@ function mapStateToProps(state) {
 // 2、通过把aciont和dispatch链接起来
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(loginActions,dispatch)
+    actions: bindActionCreators(loginActions,dispatch),
   }
 }
 export default connect(mapStateToProps , mapDispatchToProps)(Login);

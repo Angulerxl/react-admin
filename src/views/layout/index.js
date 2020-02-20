@@ -5,13 +5,12 @@ import LeftNav from './components/LeftNav'
 import TopNav from './components/TopNav'
 import Main from './components/Main'
 
-import Login from '@/views/login'
-
 export default class Layout extends Component { 
+  componentWillMount() { 
+    console.log(this.props,'=====0000')
+  }
     render() { 
         return (
-        //   <Router>
-            <div>
               <div className="layout">
                 <div className="letf-layout">
                   <LeftNav />
@@ -25,9 +24,6 @@ export default class Layout extends Component {
                   </div>
                 </div>
               </div>
-              <Login />
-            </div>
-        //   </Router>
         )
     }
 } 
