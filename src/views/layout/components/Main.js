@@ -9,8 +9,7 @@ export default class Main extends Component {
     render() {
         return (
             <div className="main">
-                欢迎来到我的react世界，不过react还一直在更新中...
-                谢谢您过来见证我的成长～
+                欢迎来到我的react世界~
             </div>
         )
     }
