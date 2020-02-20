@@ -9,7 +9,7 @@ export default class Main extends Component {
     render() {
         return (
             <div className="main">
-                欢迎来到我的react世界~
+                欢迎来到由react编写的demo世界~
             </div>
         )
     }
