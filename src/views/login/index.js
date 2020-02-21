@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './login.scss'
+import style from './login.module.scss'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as loginActions from '@/redux/actions/login'
@@ -26,10 +26,10 @@ import * as loginActions from '@/redux/actions/login'
                  render() {
                    return (
                      <div>
-                       <div className="title">
+                       <div className={style.title}>
                          <h1 style={{ color: '#61dafb' }}>React</h1>
                        </div>
-                       <div className="content">
+                       <div className={style.content}>
                          <div>
                            <label htmlFor="">账号：</label>
                            <input

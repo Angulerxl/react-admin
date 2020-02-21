@@ -16,7 +16,7 @@ class TopNav extends Component {
           <div className={style.topNav}>
             <span className={style.title}>React</span>
             <span
-              className={[style.acount, style.signOut]}
+              className={style.acount}
               onClick={this.signOut.bind(this)}
             >
               <Link to="/login">退出</Link>
