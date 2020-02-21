@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react'
 import style from './style/main.module.scss'
-// import  Button  from 'antd/es/date-picker' // 加载 JS
-// import 'antd/es/date-picker/style/css'; // 加载 CSS
 
 export default class Main extends Component {
     componentWillMount() {

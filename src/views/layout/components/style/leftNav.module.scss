@@ -1,3 +1,5 @@
+$height50:50px;
+
 .leftNav{
        position: fixed;
     left: 0px;
@@ -6,14 +8,20 @@
     height: 100%;
     overflow: hidden;
        background-color: #20232a;
-       color: black;
-    color: white;
-    padding: 20px;
-    li{
-        height: 50px;
-        line-height: 50px;
-        padding: auto 10px;
-        cursor: pointer;
-    }
+    // padding: 20px;
+    // li{
+    //     height: 50px;
+    //     line-height: 50px;
+    //     padding: auto 10px;
+    //     cursor: pointer;
+    // }
   
+}
+
+:global{
+   .ant-tree li .ant-tree-node-content-wrapper,.ant-tree li span.ant-tree-switcher, .ant-tree li span.ant-tree-iconEle{
+       height: $height50;
+    line-height: $height50;
+    color: rgb(191, 203, 217);
+   }
 }
