@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import './style/topNav.scss'
+import style from './style/topNav.module.scss'
 import { bindActionCreators } from 'redux';
 import * as loginActions from '@/redux/actions/login'
 import { Link } from 'react-router-dom'
+console.log(style, '1111style')
 
 class TopNav extends Component {
     signOut() {
@@ -12,17 +13,18 @@ class TopNav extends Component {
     }
     render() {
         return (
-            <div className="top-nav">
-                首页
-                
-                <span className="acount signOut" onClick={this.signOut.bind(this)}>
-                    <Link to="/login">退出</Link>
-                </span>
-                <span className="acount ">
-                    用户名：{this.props.state.isLogin&&this.props.state.account}
-                </span>
-                
-            </div>
+          <div className={style.topNav}>
+            <span className={style.title}>React</span>
+            <span
+              className={[style.acount, style.signOut]}
+              onClick={this.signOut.bind(this)}
+            >
+              <Link to="/login">退出</Link>
+            </span>
+            <span className={style.acount}>
+              用户名：{this.props.state.isLogin && this.props.state.account}
+            </span>
+          </div>
         )
     }
 } 

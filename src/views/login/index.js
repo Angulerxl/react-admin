@@ -25,39 +25,36 @@ import * as loginActions from '@/redux/actions/login'
                 }
                  render() {
                    return (
-                       <div>
-                         <div className="title">
-                         <h1>React</h1>
-                         </div>
-                         <div className="content">
-                           <div>
+                     <div>
+                       <div className="title">
+                         <h1 style={{ color: '#61dafb' }}>React</h1>
+                       </div>
+                       <div className="content">
+                         <div>
                            <label htmlFor="">账号：</label>
-                             <input
-                               type="text"
-                               value={this.props.state.account}
-                               placeholder="请输入账号"
-                               onChange={this.handleAccount}
-                             />
-                           </div>
-                           <div>
-                             <label htmlFor="">密码：</label>
-                             <input
-                               type="passwork"
-                               value={this.props.state.passWork}
-                               placeholder="请输入密码"
-                               onChange={this.handlePW}
-                             />
-                           </div>
-                           <div>
-                             <button
-                                 type="button"
-                                 onClick={this.handleSubmit}
-                               >
-                                 登录
-                               </button>
-                           </div>
+                           <input
+                             type="text"
+                             value={this.props.state.account}
+                             placeholder="请输入账号"
+                             onChange={this.handleAccount}
+                           />
+                         </div>
+                         <div>
+                           <label htmlFor="">密码：</label>
+                           <input
+                             type="passwork"
+                             value={this.props.state.passWork}
+                             placeholder="请输入密码"
+                             onChange={this.handlePW}
+                           />
+                         </div>
+                         <div>
+                           <button type="button" onClick={this.handleSubmit}>
+                             登录
+                           </button>
                          </div>
                        </div>
+                     </div>
                    )
                  }
                }

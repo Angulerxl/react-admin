@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './style/leftNav.scss'
+import './style/leftNav.module.scss'
 import { Tree, Icon, Divider } from 'antd'
 const { TreeNode } = Tree
 
@@ -16,7 +16,7 @@ export default class LeftNav extends Component {
                  }
                  render() {
                    return (
-                     <div>
+                     <div className="left-nav">
                        <h1
                          style={{
                            color: '#fff',

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import './style/main.scss'
+import './style/main.module.scss'
 // import  Button  from 'antd/es/date-picker' // 加载 JS
 // import 'antd/es/date-picker/style/css'; // 加载 CSS
 

@@ -1,4 +1,12 @@
 .left-nav{
+       position: fixed;
+    left: 0px;
+    top: 64px;
+    width: 210px;
+    height: 100%;
+    overflow: hidden;
+       background-color: #20232a;
+       color: black;
     color: white;
     padding: 20px;
     li{
