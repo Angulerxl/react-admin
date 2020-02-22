@@ -8,45 +8,49 @@ export default {
     list: [
       {
         id: 10001,
-        // exact: true,
+        exact: true,
         path: '/',
         component: () => (
           <div>
-            我是首页
-            <Set />
+            我是首页000
+            <Echarts />
           </div>
         ),
         meta: {
           title: '首页',
-          icon: 'pgmb'
-        },
-        children: [
-          {
-            id: 10001_1,
-            path: '/test',
-            component: () => <Test />,
-            meta: {
-              title: '测试界面路由'
-            }
-          }
-        ]
+          icon: 'user'
+        }
       },
       {
         id: 10002,
         path: '/echarts',
+        exact: true,
         component: () => <Echarts />,
         meta: {
-          title: 'eChart'
+          title: 'eChart',
+          icon: 'user'
         }
       },
       {
         id: 10003,
-        path: '/set',
+        path: '/echarts',
+        exact: true,
         component: () => <Set />,
         meta: {
-          title: '设置中心'
+          title: '设置中心',
+          icon: 'user'
         },
-        children: []
+        children: [
+          {
+            id: 100031,
+            exact: true,
+            path: '/test',
+            component: () => <Test />,
+            meta: {
+              title: '测试'
+            }
+          }
+        ]
       }
     ]
   },

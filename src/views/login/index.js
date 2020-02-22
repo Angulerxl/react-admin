@@ -3,11 +3,13 @@ import style from './login.module.scss'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as loginActions from '@/redux/actions/login'
+// import { createBrowserHistory } from 'history'
 
+// const history = createBrowserHistory()
  class Login extends Component {
                  constructor(props) {
                    super(props)
-                   console.log(props,'====props')
+                   console.log(props,'====props登录获取props')
                    this.handleAccount = this.handleAccount.bind(this)
                    this.handlePW = this.handlePW.bind(this)
                    this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,9 +21,8 @@ import * as loginActions from '@/redux/actions/login'
                   this.props.actions.updatePsW(e.target.value)
                  }
                 handleSubmit() { 
-                  this.props.actions.isLogin(true)
+                  this.props.actions.isLogin('true')
                   alert('提交表单')
-                  this.props.history.push("/layout");
                 }
                  render() {
                    return (
