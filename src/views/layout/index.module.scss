@@ -1,0 +1,25 @@
+.logo{
+    width: auto;
+    height: 64px;
+    color: #61dafb;
+    text-align: center;
+    margin: 0;
+    line-height: 64px;
+    font-size: 28px;
+    letter-spacing: 0.01em;
+}
+.headerRi{
+    float: right;
+    margin-left: 10px;
+}
+:global{
+    section.ant-layout.ant-layout-has-sider{
+        height: 100%;
+    }
+    .ant-layout-header{
+        padding: 0 10px;
+    }
+    .ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
+        margin-top: 0px;
+    }
+}
