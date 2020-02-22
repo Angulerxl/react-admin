@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route} from 'react-router-dom'
 import Layouts from '@/views/layout'
 import Login from '@/views/login'
 import { connect } from 'react-redux'
@@ -14,17 +14,7 @@ import { connect } from 'react-redux'
   render() { 
         return (
           <Router>
-            {/* <ModalSwitch/> */}
-            { this.props.state.isLogin==='true'? <Layouts /> : <Login />}
-            {/* <Route path="/">
-             
-            </Route>
-            <Route path="/login">
-             
-            </Route> */}
-            {/* <Route path="/" exact render={() => <Redirect to="/layout" />} />
-            <Route path="/layout" component={Layouts}></Route>
-            <Route path="/login" component={Login} /> */}
+            {this.props.state.isLogin ? <Route path="/" component={Layouts}/>  : <Route path="/login" component={Login} />}
           </Router>
         )
     }

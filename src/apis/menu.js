@@ -8,8 +8,8 @@ export default {
     list: [
       {
         id: 10001,
-        exact: true,
         path: '/',
+        exact: true,
         component: () => (
           <div>
             我是首页000
@@ -24,7 +24,7 @@ export default {
       {
         id: 10002,
         path: '/echarts',
-        exact: true,
+        
         component: () => <Echarts />,
         meta: {
           title: 'eChart',
@@ -52,6 +52,7 @@ export default {
           }
         ]
       }
+     
     ]
   },
   msg: '操作成功',

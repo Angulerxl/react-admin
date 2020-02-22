@@ -90,7 +90,7 @@ const { Header, Sider, Content } = Layout
                   //  console.log(data, '================')
                  }
                  handleSigout() {
-                   this.props.dispatch.isLogin('false')
+                   this.props.dispatch.isLogin(false)
 
                  }
                  handleMenu(val) {
@@ -132,8 +132,8 @@ const { Header, Sider, Content } = Layout
                              className={style.headerRi}
                              onClick={this.handleSigout.bind(this)}
                            >
-                             {/* <Link to="/login">退出</Link> */}
-                             退出
+                             <Link to="/login">退出</Link>
+                             {/* 退出 */}
                            </span>
                            <span className={style.headerRi}>
                              用户名：{this.props.state.account}--

@@ -21,8 +21,9 @@ import * as loginActions from '@/redux/actions/login'
                   this.props.actions.updatePsW(e.target.value)
                  }
                 handleSubmit() { 
-                  this.props.actions.isLogin('true')
+                  this.props.actions.isLogin(true)
                   alert('提交表单')
+                  this.props.history.push('/')
                 }
                  render() {
                    return (
@@ -63,15 +64,6 @@ import * as loginActions from '@/redux/actions/login'
 function mapStateToProps(state) {
   return { state:state.login}
 }
-//1、不使用bindActionCreators时候：
-// function mapDispatchToProps(dispatch) {
-//   console.log(dispatch, '====Login-Dispatch000000')
-//   return {
-//     updateAccount: (value) => dispatch({ type: 'UPDATE_ACCOUNT', value}),
-//     updatePW: (value) => dispatch({ type: 'UPDATE_PASSWORK', value }),
-//   } 
-// }
-// 2、通过把aciont和dispatch链接起来
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(loginActions,dispatch),

@@ -3,7 +3,7 @@
 const stateData = {
     'account': 'admin',
     'passWork': '123456',
-    'isLogin':'true'
+    'isLogin':true
 }
 const login = (state = stateData, action) => { 
     switch (action.type) { 
