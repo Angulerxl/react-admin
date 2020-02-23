@@ -3,18 +3,18 @@ import { HashRouter as Router, Route} from 'react-router-dom'
 import Layouts from '@/views/layout'
 import Login from '@/views/login'
 import { connect } from 'react-redux'
-// import Echarts from '@/views/echarts'
-// import Set from '@/views/set'
-// import Test from '@/views/test'
-// const history = useHistory()
-// console.log(history,'====lishi')
-// debugger
+import { createBrowserHistory } from 'history'
+const customHistory = createBrowserHistory()
 
  class Routers extends React.Component { 
   render() { 
         return (
-          <Router>
-            {this.props.state.isLogin ? <Route path="/" component={Layouts}/>  : <Route path="/login" component={Login} />}
+          <Router history={customHistory}>
+            {this.props.state.isLogin ? (
+              <Route path="/" component={Layouts} />
+            ) : (
+              <Route path="/login" component={Login} />
+            )}
           </Router>
         )
     }
